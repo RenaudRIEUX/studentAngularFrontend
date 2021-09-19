@@ -21,7 +21,6 @@ export class StudentsComponent implements OnInit {
   private getStudents(){
     this.studentService.getStudents().subscribe(data=>{
       this.students=data;
-
     });
   }
 
