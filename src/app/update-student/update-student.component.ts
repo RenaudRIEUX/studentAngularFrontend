@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Student } from '../Student';
+import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-update-student',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdateStudentComponent implements OnInit {
 
-  constructor() { }
+  student : Student = new Student();
+
+  constructor(private studentService : StudentService) { }
 
   ngOnInit(): void {
+    
+    
+    
+  }
+  
+  saveStudent(){
+    this.studentService.saveStudent(this.student).subscribe( data =>{
+      console.log(data);
+    },
+    error => console.log(error));
+  }
+    
+  onSubmit(){
+    console.log(this.student);
+    this.saveStudent()
   }
 
 }

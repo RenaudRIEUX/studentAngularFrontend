@@ -8,14 +8,19 @@ import { Student } from './Student';
 })
 export class StudentService {
   private baseUrl:string = "http://localhost:8080/"
-  private baseUrl2:string = "http://localhost:8080/students";
 
   constructor(private httpClient:HttpClient) {
 
   }
   
   getStudents():Observable<Student[]>{
-    return this.httpClient.get<Student[]>(`${this.baseUrl2}`);
+    return this.httpClient.get<Student[]>(`${this.baseUrl}/students`);
   }
+
+  saveStudent(student : Student) : Observable<Object>{
+    return this.httpClient.post(`${this.baseUrl}/addStudent`, student);
+    
+  }
+  
 
 }
