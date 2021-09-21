@@ -10,18 +10,17 @@ import { StudentService } from '../student.service';
 })
 export class StudentsComponent implements OnInit {
 
+  
+  
+
   students:Student[];
 
   constructor(private studentService : StudentService) { }
 
   ngOnInit(): void {
-    this.getStudents();
-  }
-
-  private getStudents(){
     this.studentService.getStudents().subscribe(data=>{
-      this.students=data;
-    });
+      this.students = data;
+    })
   }
 
 }

@@ -3,22 +3,19 @@ import { Student } from '../Student';
 import { StudentService } from '../student.service';
 
 @Component({
-  selector: 'app-update-student',
-  templateUrl: './update-student.component.html',
-  styleUrls: ['./update-student.component.css']
+  selector: 'app-create-student',
+  templateUrl: './create-student.component.html',
+  styleUrls: ['./create-student.component.css']
 })
-export class UpdateStudentComponent implements OnInit {
+export class CreateStudentComponent implements OnInit {
 
   student : Student = new Student();
 
   constructor(private studentService : StudentService) { }
 
   ngOnInit(): void {
-    
-    
-    
   }
-  
+
   saveStudent(){
     this.studentService.saveStudent(this.student).subscribe( data =>{
       console.log(data);
