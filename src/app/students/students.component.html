@@ -8,7 +8,7 @@
 		<tr *ngFor="let student of students">
 			<td>{{student.name}}</td>
 			<td>
-				<button class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+				<button (click) ="deleteStudent(student.id)" class = "btn btn-danger">Delete</button>
 			</td>
 		</tr>
 	</tbody>

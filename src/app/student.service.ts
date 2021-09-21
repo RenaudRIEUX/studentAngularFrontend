@@ -21,6 +21,12 @@ export class StudentService {
     return this.httpClient.post(`${this.baseUrl}/addStudent`, student);
     
   }
+
+  deleteStudent(studentId:number):Observable<Object>{
+    console.log(`${this.baseUrl}delete/${studentId}`);
+    
+    return this.httpClient.delete(`${this.baseUrl}delete/${studentId}`);
+  }
   
 
 }

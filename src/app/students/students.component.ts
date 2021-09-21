@@ -23,4 +23,14 @@ export class StudentsComponent implements OnInit {
     })
   }
 
+  deleteStudent(studentId:number):void{
+    console.log(studentId);
+    
+    this.studentService.deleteStudent(studentId).subscribe(data=>{
+      console.log(data);
+      
+    }
+    )
+  }
+
 }
