@@ -8,13 +8,15 @@ import { StudentsComponent } from './students/students.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CreateStudentComponent } from './create-student/create-student.component';
+import { UpdateStudentComponent } from './update-student/update-student.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentsComponent,
-    CreateStudentComponent
+    CreateStudentComponent,
+    UpdateStudentComponent
     //UpdateStudentComponent
   ],
   imports: [
