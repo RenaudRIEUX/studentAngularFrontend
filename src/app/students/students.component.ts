@@ -10,6 +10,7 @@ import { UpdateStudentComponent } from '../update-student/update-student.compone
   templateUrl: './students.component.html',
   styleUrls: ['./students.component.css']
 })
+
 export class StudentsComponent implements OnInit {
 
   students:Student[];
@@ -27,12 +28,15 @@ export class StudentsComponent implements OnInit {
     
     this.studentService.deleteStudent(studentId).subscribe(data=>{
       console.log(data);
-      
     }
     )
   }
 
   getStudent(studentId:number){
+    this.router.navigate(['student-detail', studentId])
+  }
+
+  updateStudent(studentId:number){
     this.router.navigate(['update-student', studentId])
   }
 

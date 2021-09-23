@@ -9,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CreateStudentComponent } from './create-student/create-student.component';
 import { UpdateStudentComponent } from './update-student/update-student.component';
+import { StudentDetailComponent } from './student-detail/student-detail.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { UpdateStudentComponent } from './update-student/update-student.componen
     AppComponent,
     StudentsComponent,
     CreateStudentComponent,
-    UpdateStudentComponent
+    UpdateStudentComponent,
+    StudentDetailComponent
     //UpdateStudentComponent
   ],
   imports: [

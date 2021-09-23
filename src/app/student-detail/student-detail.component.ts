@@ -4,14 +4,16 @@ import { Student } from '../Student';
 import { StudentService } from '../student.service';
 
 @Component({
-  selector: 'app-update-student',
-  templateUrl: './update-student.component.html',
-  styleUrls: ['./update-student.component.css']
+  selector: 'app-student-detail',
+  templateUrl: './student-detail.component.html',
+  styleUrls: ['./student-detail.component.css']
 })
-export class UpdateStudentComponent implements OnInit {
+export class StudentDetailComponent implements OnInit {
+
 
   studentId:number;
   student:Student;
+  
   constructor(private route: ActivatedRoute, private studentService : StudentService) { }
 
   ngOnInit(): void {
@@ -22,7 +24,4 @@ export class UpdateStudentComponent implements OnInit {
     })
   }
 
-  onSubmit(){
-    this.studentService.updateStudent(this.studentId, this.student);
-  }
 }
